@@ -10,4 +10,4 @@ COPY config.sql /
 
 RUN chmod +x /entrypoint.sh
 
-ENTRYPOINT (screen -d -m sh /entrypoint.sh) && sh
+ENTRYPOINT sh
