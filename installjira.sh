@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # configure the mysql the first time
 mysql -u root -p < configMysql.sql
 # download jira
