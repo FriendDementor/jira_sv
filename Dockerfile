@@ -26,4 +26,6 @@ RUN chmod +x /entrypoint.sh
 
 RUN chmod +x /mysqlstart.sh
 
+RUN chmod +x /jirastart.sh
+
 ENTRYPOINT sh
