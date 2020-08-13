@@ -24,4 +24,6 @@ COPY config.sql /
 
 RUN chmod +x /entrypoint.sh
 
+RUN chmod +x /mysqlstart.sh
+
 ENTRYPOINT sh
