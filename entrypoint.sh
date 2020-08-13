@@ -9,7 +9,7 @@ if [[ -f "$FILE" ]]; then
     echo "SQL already configurated"
 else
     # first mysql configuration
-    mysql -u root -p < config.sql
+    mysql -u root < config.sql
     echo "SQL configured"
     touch "$FILE"
 fi
