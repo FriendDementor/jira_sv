@@ -4,11 +4,20 @@
 screen -d -m mysql bash /mysqlstart.sh
 sleep 5
 
-FILE=/etc/init.d/jira
+FILE=/mysqlConfigured.lock
 if ![ -f "$FILE" ]; then
-    # install jira
-    bash /installjira.sh
+    # first mysql configuration
+    mysql -u root -p < config.sql
+    echo "SQL configured"
+    touch "$FILE"
 fi
+sleep 5
+
+#FILE=/etc/init.d/jira
+#if ![ -f "$FILE" ]; then
+    ## install jira
+    #bash /installjira.sh
+#fi
 
 # jira installed & stopped
 screen -d -m jira bash /jirastart.sh
