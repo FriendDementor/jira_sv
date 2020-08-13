@@ -16,8 +16,6 @@ fi
 sleep 5
 
 # jira installed & stopped
-#screen -d -m -t jira bash /jirastart.sh
-
-screen -d -m bash -c /entrypoint.sh
+screen -d -m -t jira bash -c /jirastart.sh
 
 read -p "Press enter to continue" -n 1
