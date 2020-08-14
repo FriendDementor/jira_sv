@@ -15,7 +15,6 @@ else
 fi
 sleep 5
 
-# jira installed & stopped
-screen -d -m -t jira bash -c /jirastart.sh
+/etc/init.d/jira start
 
 read -p "Press enter to continue" -n 1
