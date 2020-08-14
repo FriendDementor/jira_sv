@@ -26,4 +26,4 @@ RUN chmod +x /entrypoint.sh
 
 RUN chmod +x /mysqlstart.sh
 
-ENTRYPOINT entrypoint.sh
+ENTRYPOINT bash -c entrypoint.sh
